@@ -1,0 +1,135 @@
+.stepOneStopwatch {
+	background-color: $secondaryColor;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	//styling speech bubble from: http://nicolasgallagher.com/pure-css-speech-bubbles/demo/ 
+	.speechBubble {
+		position: relative;
+		padding: 15px;
+		color: #fff;
+		background: #fff;
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		border-radius: 10px;
+		box-shadow: 10px 10px 13px -6px rgba(168,152,142,1);
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: -20px;
+			left: 50px;
+			border-width: 20px 0 0 20px;
+			border-style: solid;
+			border-color: #fff transparent;
+			display: block;
+			width: 0;
+		}
+
+		p {
+			font-style: italic;
+			color: #555;
+			font-size: 2rem;
+			line-height: 3.4rem;
+			font-weight: 300;
+			margin: 0;
+			padding: 0;
+			@include respond-to ('small') {
+				font-size: 1.5rem;
+				line-height: 1.5rem;
+			}
+		}
+	}
+
+	.readingVerbiage {
+		background-color: white;
+		width: 50%;
+		float: left;
+		@include respond-to ('small') {
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+		padding: 30px;
+	}
+
+	.stepOneInfo {
+		width: 50%;
+		float: right;
+		@include respond-to ('small') {
+			text-align: left;
+			width: 100%;
+		}
+	}
+
+	.calculatingSpeed {
+		text-align: right;
+		@include respond-to ('small') {
+			text-align: left;
+		}
+		
+		h3 {
+			font-size: 3rem;
+			margin-top: 0;
+			margin-bottom: 0;
+			color: #555;
+		}
+
+		#seconds, #tens {
+			font-size: 8rem;
+			@include respond-to ('small') {
+				font-size: 5rem;
+			}
+		}
+
+		#tens {
+			margin-left: 15px;
+
+			@include respond-to("small") {
+				margin-left: 0;
+			}
+		}
+
+		.watch {
+			font-size: 7.5rem;
+			color: $lighterGray;
+		}
+
+		span {
+			padding-right: 5px;
+		}		
+		button {
+			padding: 10px 30px;
+			font-size: 1.5rem;
+			border: none;
+			transition: .3s all;
+
+			@include respond-to ('small') {
+				padding: 10px 20px;
+			}
+		}
+
+		#button-start {
+			background-color: $primaryColor;
+			color: white;
+			&:hover {
+				background-color: darken($primaryColor, 10);
+			}
+		}
+
+		#button-stop {
+			background-color: $primaryColor;
+			color: white;
+			&:hover {
+				background-color: darken($primaryColor, 10);
+			}
+		}
+
+		#button-reset {
+			background-color: white;
+			color: $lighterGray;
+			&:hover {
+				background-color: darken(white, 10);
+			}
+		}
+	}
+}

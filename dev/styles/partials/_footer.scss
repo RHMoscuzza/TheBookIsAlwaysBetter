@@ -1,0 +1,65 @@
+footer {
+	background-color: black;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(https://images.unsplash.com/photo-1465433045946-ba6506ce5a59?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=);
+	background-size: cover;
+	
+	.wrapper {
+		height: auto;
+	}
+
+	img {
+		max-width: 100px;
+	}
+
+	p {
+		color: white;
+		font-size: 1.8rem;
+		padding-right: 20px;
+		@include respond-to(small) {
+			float: none;
+		}
+	}
+
+	.poweredByText {
+		margin-top: 20px;
+
+		@include respond-to(small) {
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+		}
+	}
+
+
+	.logos {
+		float: left;
+		padding-right: 20px;
+		@include respond-to(small) {
+			float: none;
+			padding-bottom: 20px;
+		}
+	}
+
+	.logosRight {
+		float: right;
+		@include respond-to(small) {
+			padding-top: 50px;
+			float: none;
+		}
+	}
+
+	.copyright {
+		margin: 0 auto;
+		padding-right: 0;
+		width: 400px;
+		font-size: 1.2rem;
+		margin-top: 20px;
+
+		@include respond-to(small) {
+			margin-top: 0px;
+			max-width: 100%;
+		}
+	}
+}
+

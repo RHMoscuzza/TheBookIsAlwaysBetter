@@ -1,0 +1,79 @@
+.results {
+	padding-top: 50px;
+	padding-bottom: 100px;
+	@include respond-to ('small') {
+		overflow: hidden;
+	}
+
+	background-color: $tertiaryColor;
+	text-align: center;
+
+	h2 {
+		font-family: $primaryFont;
+		font-size: 5rem;
+		font-weight: 300;
+		font-style: normal;	
+	}
+
+	h3 {
+		color: #555;
+		font-size: 2.5rem;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	p {
+		@include respond-to("small") {
+			font-size: 1rem;
+		}
+	}
+
+	.resultsBox {
+		width: calc((100% - 16px) / 3);
+		background-color: white;
+		float: left;
+		margin-left: 8px;
+		margin-top: 20px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.userSecondsPerBook, .userDaysToRead, .userReadingSpeed {
+		font-size: 5rem;
+		color: #ab453c;
+
+		@include respond-to("small") {
+			font-size: 2.5rem;
+		}
+	}
+	.resultButtons {
+		margin: 50px;
+	}
+	.buyNow {
+		float: left;
+	}
+	.buyNow img {
+		width: 200px;
+	}
+	#resetButton {
+		float: right;
+		border-radius: 0px;
+		background-color: rgba(darken($primaryColorRgb,20),.7);
+		border: 3px solid white;
+		color: white;
+		text-transform: uppercase;
+		font-size: 2.4rem;
+		border-radius: 4px;
+		letter-spacing: 2px;
+		padding: 10px 25px;
+		transition: .3s all;
+		
+		@include respond-to ('small') {
+			margin-top: 2rem;
+			font-size: 1.5rem;
+		}
+		&:hover {
+			background-color: darken($primaryColor,20);
+		}
+	}
+}

@@ -1,0 +1,45 @@
+**** NOTES ON DEVELOPER STYLE ****
+// Use double quotes
+// Function style: Function expression (var function = () {})
+// ES6 best practices
+
+
+**** PSEUDOCODE ****
+
+// Input field where users input name of a movie (required)
+	// (if no movie exists / can be found - do something - but we will have autocomplete to avoid this problem)
+// On submit: Searches the TMDB database for movies with the same title
+// Displays list of 4 movie possibilities. User clicks on the movie they want.
+// Connect to Google Books API and return one book that matches the movie (maybe top result / index 0 of the Google Books response)
+// also look at page count of book to determine length
+
+// Also display a paragraph (of 100 words) for user to time themselves reading
+// Timer on the designated paragraph. User can hit start to begin, and then stop once they finish reading it.
+// When click on start, timer starts (visible to user)
+// Option to reset timer
+// When click stop, timer stops - we store the number into a variable: UserTime.
+// Calculation based on:
+	250-300 words per page
+	55,000 words per novel (200 pages)*
+	*if book is longer than this do math to fix the word count
+
+// Reading Speed: Measured in words per minute. Function: ReadingSPeed to Take number of words and divide by UserTime
+// Display Reading Speed: reading speed is displayed.
+// Input field: "How much time will you spend reading each day?" User inputs a number
+// Take that value and store it in a variable: UserFreeTime
+
+// Calculate how long it takes to read the book based on UserFreeTime and ReadingSpeed
+	readingSpeed = Words / minute
+	bookAvg = 250 words / page
+	totalPages = x pages / book (in pages)
+	
+	using math, determine:
+	totalWords = totalPages * bookAvg (in words)
+	totalTimeToRead = totalWords / readingSpeed (in time)
+	freeTimePerDay = minutes
+	
+	total days totalTimeToRead / freeTimePerDay
+
+// A paragraph is displayed to the user that shows the results
+// Also included is an average result (so user can compare their results to the average person)
+// (Disclaimer: Numbers may be slightly inaccurate)

@@ -1,0 +1,61 @@
+.bookInfo {	
+	background-color: black;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-size: contain;
+	@include respond-to ('small') {
+		overflow: auto;
+	}
+
+	p {
+		color: $quaternaryColor;
+		font-size: 1.2rem;
+	}
+
+	.bookPoster {
+		width: 25%;
+		float: left;
+		margin-left: 5%;
+		@include respond-to ('small') {
+			width: 100%;
+			margin-left: 0;
+		}
+		img {
+			box-shadow: 5px 5px 30px #000;
+			@include respond-to ('small') {
+				padding-bottom: 2rem;
+			}
+		}
+	}
+
+	.bookDetails {
+		float: left;
+		width: 65%;
+		margin-right: 5%;
+		padding-left: 50px;
+		@include respond-to ('small') {
+			width: 100%;
+			padding-left: 0;
+		}
+		.bookTitle {
+
+		}
+		.bookAuthor {
+			font-size: 2rem;
+		}
+		.bookOverview {
+			h2 {
+				font-family: $primaryFont;
+			}
+			p {
+				font-size: 1.8rem;
+				line-height: 2.8rem;
+				color: #aaa;
+				@include respond-to("small") {
+					font-size: 1.5rem;
+					line-height: auto;
+				}
+			}
+		}
+	}
+}

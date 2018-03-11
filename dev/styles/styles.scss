@@ -1,0 +1,18 @@
+@import "partials/setup";
+@import "partials/variables";
+
+//General 
+@import "partials/mixins";
+@import "partials/global";
+
+// Semantic Structure
+@import "partials/main";
+@import "partials/header";
+@import "partials/footer";
+
+// Page Structure
+@import "partials/movieInfo";
+@import "partials/bookInfo";
+@import "partials/stopwatch";
+@import "partials/freeTimeQuery";
+@import "partials/results";

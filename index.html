@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The book is always better</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Playfair+Display:700i" rel="stylesheet">
+	<link rel="stylesheet" href="public/styles/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<script src="public/scripts/wow.min.js"></script>
+		<script>
+		new WOW().init();
+		</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>	
+<header>
+	<div class="wrapper">
+		<div class="headerText">
+			<img src="assets/tbiab-white.png" alt="image of app logo" class="booksLogo">
+			<h3>Find a book that matches your favorite movies</h3>
+			<form class="movieQuery">
+				<div>
+					<input type="text" class="queryInput" value="" placeholder="Enter a movie title (ex. Jurassic Park)">
+				</div>
+				<div class="submitBtn">
+					<input type="submit" class="querySubmit" value="Submit" id="go1">
+				</div>
+			</form>
+		</div>
+	</div>
+</header>
+
+<section class="movieInfo hidden">
+	<div class="wrapper clearfix">
+		<h2>Related books based on your movie search</h2>
+		<div class="movieResults"> 
+		</div>
+	</div>
+</section>
+
+<section class="bookInfo hidden">
+	<div class="wrapper clearfix">
+		<div class="bookPoster wow flipInX">
+			<!-- {Book Image Goes Here} -->
+		</div>
+		<div class="bookDetails wow flipInX">
+			<div class="bookTitle">
+				<!-- {Book Title Goes Here} -->
+			</div>
+			<div class="bookAuthor">
+				<!-- {Book Author Goes Here} -->
+			</div>
+			<div class="bookOverview">
+				<!-- {Book Overview Goes Here} -->
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="stepOneStopwatch hidden">
+	<div class="wrapper clearfix">
+		<div class="calculatingSpeed">
+			<div class="stepOneInfo">
+				<span class="steps">01</span>
+				<h3>Calculating average reading speed</h3>
+				<p>Read the passage on the left and time yourself</p>
+			</div>
+		<div class="readingVerbiage speechBubble"></div>
+			<div class="watchTimeSmall">
+				<span id="seconds">00</span><span class="watch">s</span>
+				<span id="tens">00</span><span class="watch">ms</span>
+			</div>
+			<button id="button-start"><span><i class="fa fa-play-circle-o" aria-hidden="true"></i></span>Start</button>
+			<button id="button-stop"><span><i class="fa fa-stop-circle-o" aria-hidden="true"></i></span>Stop</button>
+			<button id="button-reset"><span><i class="fa fa-repeat" aria-hidden="true"></i></span>Reset</button>
+		</div>
+	</div>
+</section>
+
+<section class="freeTimeQuery hidden">
+	<div class="wrapper clearfix">
+		<div class="freeTimeContainer">
+			<span class="steps">02</span>
+			<h3>How much free time do you have to read everyday?</h3>
+			<h4>While you commute, when you have a break, after dinner etc ...</h4>
+		</div>
+		<div class="freeTimeSelector">
+			<form class="freeTimeInput">
+
+				<h3>Free Time Per Day</h3>
+				<div class="freeTimeHoursDiv">
+					<input type="number" class="freeTimeHours" placeholder="--" min="0" required><p>hours</p>
+				</div>
+				<div class="freeTimeMinutesDiv">
+					<input type="number" class="freeTimeMinutes" placeholder="--" min="0" required><p>minutes</p>
+				</div>
+				<div class="freeTimeSubmitBtn">
+					<input type="submit" class="freeTimeSubmit" value="Submit" id="go">
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+<section class="results hidden">
+	<div class="wrapper">
+		<h2>Results</h2>
+		<h3>Based on your selection of the book <span id="bookTitleResults"></span></h3>
+		<div class="clearfix">
+			<div class="resultsBox resultsReadSpeed">
+				<p>Your average reading speed</p>
+				<p class="emptyResults userReadingSpeed"></p>
+				<p>words / minute</p>
+			</div>
+			<div class="resultsBox daysToRead">
+				<p>It will take you</p>
+				<p class="emptyResults userDaysToRead"></p>
+				<p>days to finish the book</p>
+			</div>
+			<div class="resultsBox moreStats">
+				<p>It will take you approximately</p>
+				<p class="emptyResults userSecondsPerBook"></p>
+				<p>seconds to read this book</p>
+			</div>
+		</div>
+		<div class="resultButtons">
+			<a href="#" class="buyNow"><img src="dev/images/googlePlayButton.png" alt="Link to buy the selected book from Google Play Store" class="googlePlayButton"></a>
+			<button id="resetButton">Reselect</button>
+		</div>
+	</div>
+</section>
+
+<footer class="hidden">
+	<div class="wrapper clearfix">
+		<p class="logos poweredByText">Search powered by</p>
+		<div class="logos">
+			<a href="https://developers.google.com/books/"><img src="assets/poweredby.png" alt="'powered by Google' logo"></a>
+		</div>
+		<div class="logos">
+			<a href="https://www.themoviedb.org/documentation/api"><img src="assets/primary-green.png" alt="TMDB logo"></a>
+		</div>
+		<div class="logosRight clearfix">
+			<!-- Share on Twitter -->
+			<div class="logos">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-text="Find the book version of your favourite movie, here!" data-lang="en" data-show-count="false">Tweet</a>
+			</div>
+		</div>
+	</div>
+	<p class="copyright">&#x24B8; 2017, Richard Chin, Milena Djokic, Jon Kwok, Beckah Moscuzza</p>
+</footer>
+
+<script src="https://use.fontawesome.com/be7cb9fabf.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="public/scripts/main.js"></script>
+</body>
+</html>
